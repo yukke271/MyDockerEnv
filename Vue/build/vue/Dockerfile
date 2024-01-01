@@ -5,7 +5,7 @@ ENV APPNAME=${APPNAME}
 WORKDIR /app/${APPNAME}
 
 # スクリプトに実行権限を付与
-COPY ./init.sh /init.sh
+COPY ./build/vue/init.sh /init.sh
 RUN chmod +x /init.sh
 
 # スクリプトの改行コードをLFに変換

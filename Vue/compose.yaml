@@ -3,7 +3,7 @@ services:
   vue:
     build:
       context: .
-      dockerfile: ./build/vue/
+      dockerfile: ./build/vue/Dockerfile
       args:
         - APPNAME=myapp
     ports:
