@@ -1,15 +1,15 @@
 version: "3"
 services:
-  nuxt:
+  next:
     build:
       context: .
-      dockerfile: ./build/nuxt/Dockerfile
+      dockerfile: ./build/next/Dockerfile
       args:
         - APPNAME=myapp
     ports:
       - "3000:3000"
     volumes:
-      - "./nuxt/app:/app"
+      - "./next/app:/app"
     environment:
      - WATCHPACK_POLLING=true
     tty: true
