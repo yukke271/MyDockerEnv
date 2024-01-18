@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: ./build/nuxt/Dockerfile
+      args:
+        - APPNAME=myapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./nuxt/app:/app"
+    environment:
+     - WATCHPACK_POLLING=true
+    tty: true
+    stdin_open: true
