@@ -5,7 +5,7 @@ ENV APPNAME=${APPNAME}
 WORKDIR /app/${APPNAME}
 
 # スクリプトに実行権限を付与
-COPY ./build/nuxt/init.sh /init.sh
+COPY ./build/next/init.sh /init.sh
 RUN chmod +x /init.sh
 
 # スクリプトの改行コードをLFに変換
